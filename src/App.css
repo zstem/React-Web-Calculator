@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Calculator {
+  background-color: #124ba7;
+  min-width: 230px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-group button {
+  background-color: #124ba7;
+  border: 1px solid white; 
+  color: white;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.btn-group-nums button {
+  background-color: #124ba7;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c3a7c; 
+  
+}
+
+button {
+  transition-duration: 0.3s;
+}
+
+#result {
+  padding-right: 10px;
+  text-align: right;
+  color: white;
+  background-color: #0d39ff96;
+  border: 2px solid #1c3a7c;
+  max-width: 500px;
+}
+
+

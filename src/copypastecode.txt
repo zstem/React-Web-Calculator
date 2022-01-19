@@ -1,0 +1,22 @@
+check(current){
+        switch(this.state.step){
+            case 0: 
+            if (typeof(current) != 'number'){
+                this.setState({ step: this.state.step + 1 });
+                this.setState({ op: current });
+                this.setState({ a: this.step.num });
+            }else{
+                this.setState({ num: `${this.state.num} + ${current}` });
+            }
+            case 1: 
+            if (typeof(current) != 'number'){
+                this.setState({ step: this.state.step + 1 });
+                this.setState({ op: current });
+                this.setState({ a: this.step.num });
+            }else{
+                this.setState({ num: this.state.num + current });
+            }
+            case 2: this.setState({ num: this.evaluate});
+        }
+        //console.log(`${this.state.a} ${this.state.op} ${this.state.b} ${this.state.step} ${this.state.num}`);
+    }
