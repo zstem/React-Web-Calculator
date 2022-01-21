@@ -18,7 +18,7 @@ class Calculator extends Component{
         switch(this.state.step){
             case 0:
             if(typeof(current) == "number"){
-                if(this.state.num == "0"){
+                if(this.state.num === "0"){
                     this.setState({ num: `${current}` }); 
                 }else{
                     this.setState({ num: `${this.state.num}${current}` });
@@ -34,7 +34,7 @@ class Calculator extends Component{
             break;
             case 1:
                 if(typeof(current) == "number"){
-                    if(this.state.b == 0){
+                    if(this.state.b === 0){
                         this.setState({ num: `${current}` });
                         setTimeout(1);
                         this.setState({ b: parseInt(`${current}`) }); 
@@ -51,11 +51,11 @@ class Calculator extends Component{
                         this.setState({step: 0});
                         this.setState({num: `${eval(`${this.state.a} ${this.state.op} ${this.state.b}`)}`});
                     }else{
-                        this.setState({num: `${eval(`${this.state.a} ${current} ${this.state.b}`)}`});
+                        this.setState({op: current});
+                        this.setState({num: `${eval(`${this.state.a} ${this.state.op} ${this.state.b}`)}`});
                         setTimeout(1);
-                        this.setState({ a: `${eval(`${this.state.a} ${current} ${this.state.b}`)}` });
+                        this.setState({ a: `${eval(`${this.state.a} ${this.state.op} ${this.state.b}`)}` });
                         this.setState({ b: 0 });
-                        //this.setState({step: 0});
                     }
                 }
             break;
@@ -103,7 +103,6 @@ class Calculator extends Component{
                         <button onClick={() => this.check(0)}>0</button>
                     </div>
                 </div>
-                <p>a: {this.state.a} op: {this.state.op} b: {this.state.b} num: {this.state.num} step: {this.state.step}</p>
             </div>
         );
     }
