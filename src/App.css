@@ -1,6 +1,8 @@
 .App {
+  margin: 0px auto;
   text-align: center;
-  
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .App-link {
@@ -8,45 +10,58 @@
 }
 
 .Calculator {
-  background-color: #124ba7;
-  min-width: 230px;
-  max-width: 500px;
+  background: radial-gradient(ellipse at bottom, #0080ffaf, transparent),
+              radial-gradient(ellipse at right, #0080ffc9, transparent),
+              rgba(0, 162, 255, 0.322);
+
+  min-width: 205px;
+  max-width: 205px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 50px #002c4678;
 }
 
 .btn-group button {
-  background-color: #124ba7;
-  border: 1px solid white; 
+  
+  border: 1px solid rgba(0, 162, 255, 0.322); 
   color: white;
-  padding: 10px 12px;
+  padding: 10px;
   cursor: pointer;
+  box-shadow: inset 0px 0 0 0 rgba(255, 255, 255, 10%);
 }
 .btn-group-nums button {
-  background-color: #124ba7;
-  border: 1px solid white;
+  
+  border: 1px solid rgba(0, 162, 255, 0.322);
   color: white;
   padding: 10px 24px;
   cursor: pointer;
+  box-shadow: inset 0px 0 0 0 rgba(255, 255, 255, 5%); 
 }
 
 button:hover {
-  background-color: #1c3a7c; 
-  
+  box-shadow: inset 100px 0 0 0 rgba(255, 255, 255, 5%); 
 }
 
+
 button {
-  transition-duration: 0.3s;
+  background-color: rgba(255,255,255,15%);
+  font-family: 'Quicksand', sans-serif;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  border-radius: 10px;
 }
+
+
 
 #result {
   padding-right: 10px;
   text-align: right;
-  color: white;
-  background-color: #0d39ff96;
-  border: 2px solid #1c3a7c;
+  color: rgba(255, 255, 255, 70%);
+  background-color: rgba(255,255,255,15%);
   max-width: 500px;
+  border-radius: 10px;
 }
 
 

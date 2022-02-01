@@ -77,8 +77,8 @@ class Calculator extends Component{
                 <h1 id="result">{this.state.num}</h1>
                 <div className="btn-group">
                     <button onClick={this.clear}>AC</button>
-                    <button onClick={() => this.check("/")}>/</button>
-                    <button onClick={() => this.check("*")}>*</button>
+                    <button onClick={() => this.check("/")}>÷</button>
+                    <button onClick={() => this.check("*")}>x</button>
                     <button onClick={() => this.check("-")}>-</button>
                     <button onClick={() => this.check("+")}>+</button>
                     <button onClick={() => this.check("=")}>=</button>
